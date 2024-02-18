@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+:root {
+  --primary-font: "Comfortaa", sans-serif;
+  --secondary-font: "Montserrat", sans-serif;
+  --primary-color: #ee5769;
+  --secondary-color: #68727b;
+  --font-color: #424242;
+  --link-color: #457caf;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: var(--primary-font);
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+p:not(:last-child) {
+  margin-bottom: 1em;
+}
+
+.container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+ul li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #457caf;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--secondary-font);
+  font-weight: 400;
+}
+
+header img {
+  max-width: 100%;
+}
+
+.banner {
+  background-image: url(./image/banner-image.avif);
+  padding: 50px 0 150px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  position: relative;
+}
+.banner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+.banner .banner-text {
+  max-width: 500px;
+  position: relative;
+  z-index: 2;
+}
+.banner .banner-text .title {
+  font-size: 36px;
+  line-height: 1.5;
+  margin-bottom: 1em;
+}
+.banner .banner-text .description {
+  margin-bottom: 64px;
+}
+.banner .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 15px 33px;
+  background: var(--primary-color);
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s;
+}
+.btn-primary:hover {
+  opacity: 0.7;
+}
+
+section {
+  margin: 50px 0;
+}
+
+.section-title {
+  margin-bottom: 40px;
+}
+
+.content {
+  margin-left: 32px;
+}
+.content > .description {
+  margin-bottom: 35px;
+  max-width: 70%;
+}
+
+.trip {
+  display: flex;
+  gap: 30px;
+}
+.trip-col {
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+.trip .text {
+  padding: 1.5rem;
+}
+
+.all-topics .row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  -moz-column-gap: 200px;
+       column-gap: 200px;
+  row-gap: 50px;
+}
+
+.col,
+.widget {
+  display: flex;
+  gap: 8px;
+}
+.col .image,
+.widget .image {
+  flex-basis: 6%;
+}
+.col .text .title,
+.widget .text .title {
+  border-bottom: 1px solid rgb(233, 233, 233);
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  width: 80%;
+}
+.col .text ul li:not(:last-child),
+.widget .text ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.entry-header {
+  display: flex;
+  gap: 100px;
+  align-items: center;
+  margin-bottom: 60px;
+}
+.entry-header .post-title {
+  font-size: 36px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+.entry-header .content {
+  flex: 1;
+}
+.entry-header .image {
+  flex: 1;
+}
+.entry-header .image img {
+  border-radius: 100%;
+}
+.entry-header .category {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.entry-header .category .time,
+.entry-header .category .date {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  color: rgba(0, 0, 0, 0.4);
+}
+.entry-header .beradcrumb {
+  background-color: #f7f7f7;
+  padding: 18px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+.entry-header .description {
+  max-width: 100%;
+}
+.entry-header .description P {
+  font-size: 18px;
+  line-height: 2;
+}
+
+.main {
+  display: flex;
+  gap: 200px;
+}
+.main .primary {
+  flex: 1;
+}
+.main .sidebar {
+  flex: 1;
+}
+.main .sidebar .title {
+  margin-bottom: 20px;
+}
+.main .sidebar .widget:not(:last-child) {
+  margin-bottom: 20px;
+}
+.main .sidebar .sticky-widget {
+  position: sticky;
+  top: 0;
+}/*# sourceMappingURL=style.css.map */

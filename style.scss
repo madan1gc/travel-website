@@ -69,9 +69,34 @@ header {
 
 // banner  css
 
+.banner-wrapper {
+  position: relative;
+  .curve {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    z-index: 1;
+  }
+
+  .curve svg {
+    position: relative;
+    display: block;
+    width: calc(137% + 1.3px);
+    height: 204px;
+  }
+
+  .curve .shape-fill {
+    fill: #ffffff;
+  }
+}
+
 .banner {
   background-image: url(./image/banner-image.avif);
-  padding: 50px 0 150px;
+  padding: 50px 0 100px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -103,12 +128,6 @@ header {
     .description {
       margin-bottom: 64px;
     }
-  }
-
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
   }
 }
 

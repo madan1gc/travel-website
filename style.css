@@ -148,7 +148,8 @@ section {
 }
 
 .trip {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(278px, 1fr));
   gap: 30px;
 }
 .trip-col {
@@ -160,6 +161,9 @@ section {
 .trip-col .title {
   font-weight: 600;
 }
+.trip-col img {
+  width: 100%;
+}
 .trip .text {
   padding: 1.5rem;
 }
@@ -169,7 +173,7 @@ section {
   grid-template-columns: repeat(2, 1fr);
   -moz-column-gap: 200px;
        column-gap: 200px;
-  row-gap: 50px;
+  row-gap: 30px;
 }
 
 .col,
@@ -260,4 +264,43 @@ section {
 .main .sidebar .sticky-widget {
   position: sticky;
   top: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .all-topics .row {
+    -moz-column-gap: 50px;
+         column-gap: 50px;
+  }
+  .banner .banner-text .description {
+    margin-bottom: 30px;
+  }
+  .banner .banner-text .title {
+    margin-bottom: 0.5em;
+  }
+  .content {
+    margin-left: 0;
+  }
+  .section-title {
+    margin-bottom: 20px;
+  }
+  .entry-header,
+  .main {
+    gap: 30px;
+  }
+}
+@media only screen and (max-width: 568px) {
+  .all-topics .row {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .entry-header {
+    flex-direction: column-reverse;
+    padding: 30px 0;
+    margin-bottom: 0;
+  }
+  .entry-header .description {
+    margin-bottom: 20px;
+  }
+  .main {
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=style.css.map */
